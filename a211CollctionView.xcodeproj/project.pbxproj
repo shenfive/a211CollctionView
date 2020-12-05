@@ -14,6 +14,7 @@
 		3B167AB5257B23E900E56803 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B167AB4257B23E900E56803 /* Assets.xcassets */; };
 		3B167AB8257B23E900E56803 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B167AB6257B23E900E56803 /* LaunchScreen.storyboard */; };
 		3B167AC1257B309700E56803 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B167AC0257B309700E56803 /* MyCollectionViewCell.swift */; };
+		3B167AC4257B56A100E56803 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B167AC3257B56A100E56803 /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3B167AB7257B23E900E56803 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B167AB9257B23E900E56803 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B167AC0257B309700E56803 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		3B167AC3257B56A100E56803 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				3B167AB6257B23E900E56803 /* LaunchScreen.storyboard */,
 				3B167AB9257B23E900E56803 /* Info.plist */,
 				3B167AC0257B309700E56803 /* MyCollectionViewCell.swift */,
+				3B167AC3257B56A100E56803 /* ImageViewController.swift */,
 			);
 			path = a211CollctionView;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			files = (
 				3B167AB0257B23E800E56803 /* ViewController.swift in Sources */,
 				3B167AAC257B23E800E56803 /* AppDelegate.swift in Sources */,
+				3B167AC4257B56A100E56803 /* ImageViewController.swift in Sources */,
 				3B167AC1257B309700E56803 /* MyCollectionViewCell.swift in Sources */,
 				3B167AAE257B23E800E56803 /* SceneDelegate.swift in Sources */,
 			);

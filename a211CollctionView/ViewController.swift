@@ -7,12 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController,UICollectionViewDataSource {
+class ViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate {
 
 
     @IBOutlet weak var myCollectionView: UICollectionView!
     var images:[UIImage?] = []
-    
+    var selectedIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +24,7 @@ class ViewController: UIViewController,UICollectionViewDataSource {
                    UIImage(named: "image5")
         ]
         myCollectionView.dataSource = self
+        myCollectionView.delegate = self
         
         let screenSize = UIScreen.main.bounds.size
         let layout = UICollectionViewFlowLayout()
@@ -39,6 +40,16 @@ class ViewController: UIViewController,UICollectionViewDataSource {
         
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "goPage2":
+            let nextVC = segue.destination as! ImageViewController
+            nextVC.image = images[selectedIndex]
+        default:
+            break
+        }
+    }
+    
     
     
     @IBAction func segAction(_ sender: UISegmentedControl) {
@@ -87,6 +98,19 @@ class ViewController: UIViewController,UICollectionViewDataSource {
         cell.theImageView.image = images[indexPath.row]
         return cell
     }
+    
+    //MARK:UIColltionView Delegate
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("selected :\(indexPath)")
+        selectedIndex = indexPath.row
+        performSegue(withIdentifier: "goPage2", sender: nil)
+        
+        
+    }
+    
+    
+    
+    
     
 }
 
