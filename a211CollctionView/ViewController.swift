@@ -116,6 +116,9 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
 
         nextVC.image = images[indexPath.row]
 
+        nextVC.callBackFunction = {
+            print("回傳了某事")
+        }
 
         nextVC.modalPresentationStyle = .fullScreen
         present(nextVC, animated: true, completion: nil)

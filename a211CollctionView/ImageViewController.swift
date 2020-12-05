@@ -12,6 +12,10 @@ class ImageViewController: UIViewController {
     @IBOutlet weak var bigImageView: UIImageView!
     var image:UIImage? = nil
     
+    
+    var callBackFunction:(()->())? = nil
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.view.backgroundColor = UIColor.clear
@@ -21,6 +25,9 @@ class ImageViewController: UIViewController {
     
     @IBAction func close(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func someThing(_ sender: Any) {
+        callBackFunction?()
     }
     
     
