@@ -27,13 +27,27 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="myCell" id="0Fo-p7-f4D">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="myCell" id="0Fo-p7-f4D" customClass="MyCollectionViewCell" customModule="a211CollctionView" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sJP-rt-8jj">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rq2-FH-MFb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rq2-FH-MFb" firstAttribute="top" secondItem="sJP-rt-8jj" secondAttribute="top" id="4Kc-fp-2zt"/>
+                                                <constraint firstAttribute="bottom" secondItem="rq2-FH-MFb" secondAttribute="bottom" id="IZn-ub-NG3"/>
+                                                <constraint firstItem="rq2-FH-MFb" firstAttribute="leading" secondItem="sJP-rt-8jj" secondAttribute="leading" id="Qes-s7-ZHw"/>
+                                                <constraint firstAttribute="trailing" secondItem="rq2-FH-MFb" secondAttribute="trailing" id="cAi-oB-G28"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="theImageView" destination="rq2-FH-MFb" id="AbC-nw-tZf"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -53,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-29" y="54"/>
+            <point key="canvasLocation" x="-30.434782608695656" y="53.804347826086961"/>
         </scene>
     </scenes>
     <resources>
