@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="reJ-QM-y3u">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="F5s-Fs-Y5K">
                                     <size key="itemSize" width="128" height="128"/>
@@ -51,13 +51,30 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="b5p-KQ-XAs">
+                                <rect key="frame" x="20" y="5" width="374" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="nZd-kF-Gne"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="三"/>
+                                    <segment title="四"/>
+                                    <segment title="五"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="5o4-DC-7jH"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="reJ-QM-y3u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LJK-Na-ihx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b5p-KQ-XAs" secondAttribute="trailing" constant="20" id="e9E-Xe-fTs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="reJ-QM-y3u" secondAttribute="bottom" id="iVd-dc-hm8"/>
-                            <constraint firstItem="reJ-QM-y3u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lBy-ep-m34"/>
+                            <constraint firstItem="b5p-KQ-XAs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jqb-Nw-8Ov"/>
+                            <constraint firstItem="reJ-QM-y3u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="lBy-ep-m34"/>
+                            <constraint firstItem="b5p-KQ-XAs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="qHH-2P-r1s"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="reJ-QM-y3u" secondAttribute="trailing" id="yTh-7p-nut"/>
                         </constraints>
                     </view>
