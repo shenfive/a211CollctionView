@@ -12,7 +12,7 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
 
     @IBOutlet weak var myCollectionView: UICollectionView!
     var images:[UIImage?] = []
-    var selectedIndex = 0
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,16 +40,7 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
         
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier {
-        case "goPage2":
-            let nextVC = segue.destination as! ImageViewController
-            nextVC.image = images[selectedIndex]
-        default:
-            break
-        }
-    }
-    
+
     
     
     @IBAction func segAction(_ sender: UISegmentedControl) {
@@ -102,8 +93,15 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
     //MARK:UIColltionView Delegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("selected :\(indexPath)")
-        selectedIndex = indexPath.row
-        performSegue(withIdentifier: "goPage2", sender: nil)
+ 
+        let mainStoryBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        let nextVC = mainStoryBoard.instantiateViewController(identifier: "myImageVC") as! ImageViewController
+        
+        nextVC.image = images[indexPath.row]
+        
+        
+//        nextVC.modalPresentationStyle = .fullScreen
+        present(nextVC, animated: true, completion: nil)
         
         
     }
