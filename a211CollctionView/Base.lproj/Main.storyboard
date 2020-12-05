@@ -101,9 +101,17 @@
                                     <constraint firstAttribute="width" secondItem="NlV-5n-0gB" secondAttribute="height" multiplier="1:1" id="0Q9-DL-CIK"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77T-k9-hKU">
+                                <rect key="frame" x="32" y="20" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="close:" destination="RZT-Q3-AJa" eventType="touchUpInside" id="3ES-CB-KVC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cKY-ng-Gvl"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.5" alpha="0.51121349208402322" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cKY-ng-Gvl" firstAttribute="trailing" secondItem="NlV-5n-0gB" secondAttribute="trailing" constant="10" id="AYf-ZT-qS4"/>
                             <constraint firstItem="NlV-5n-0gB" firstAttribute="leading" secondItem="cKY-ng-Gvl" secondAttribute="leading" constant="10" id="B3N-NW-ED6"/>

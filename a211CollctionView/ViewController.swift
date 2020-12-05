@@ -95,30 +95,30 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
         print("selected :\(indexPath)")
         
         
-        let controller = UIAlertController(title: "重要提醒", message: "是否同意把所有的錢交給女朋友?", preferredStyle: .alert)
-            //   let controller = UIAlertController(title: "重要提醒", message: "是否同意把所有的錢交給老婆 ?", preferredStyle: .actionSheet)
-
-        let okAction = UIAlertAction(title: "好的", style: .default) { (_) in
-            print("你所有的錢己經給女朋友")
-        }
-        controller.addAction(okAction)
-        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
-        controller.addAction(cancelAction)
-        present(controller, animated: true, completion: nil)
+//        let controller = UIAlertController(title: "重要提醒", message: "是否同意把所有的錢交給女朋友?", preferredStyle: .actionSheet)
+//            //   let controller = UIAlertController(title: "重要提醒", message: "是否同意把所有的錢交給老婆 ?", preferredStyle: .actionSheet)
+//
+//        let okAction = UIAlertAction(title: "好的", style: .default) { (_) in
+//            print("你所有的錢己經給女朋友")
+//        }
+//        controller.addAction(okAction)
+//        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+//        controller.addAction(cancelAction)
+//        present(controller, animated: true, completion: nil)
 
         
         
         
         
  
-//        let mainStoryBoard = UIStoryboard.init(name: "Main", bundle: nil)
-//        let nextVC = mainStoryBoard.instantiateViewController(identifier: "myImageVC") as! ImageViewController
-//
-//        nextVC.image = images[indexPath.row]
-//
-//
-//        nextVC.modalPresentationStyle = .fullScreen
-//        present(nextVC, animated: true, completion: nil)
+        let mainStoryBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        let nextVC = mainStoryBoard.instantiateViewController(identifier: "myImageVC") as! ImageViewController
+
+        nextVC.image = images[indexPath.row]
+
+
+        nextVC.modalPresentationStyle = .fullScreen
+        present(nextVC, animated: true, completion: nil)
 //
         
     }

@@ -14,7 +14,14 @@ class ImageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.view.backgroundColor = UIColor.clear
         bigImageView.image = self.image
        
     }
+    
+    @IBAction func close(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
